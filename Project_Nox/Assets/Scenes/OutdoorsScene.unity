@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2155.0068, g: 2258.836, b: 3280.7996, a: 1}
+  m_IndirectSpecularColor: {r: 2155.216, g: 2258.5117, b: 3279.1968, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -504,7 +504,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8234a7897a33423458654d9bb801d50f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -523,13 +523,32 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.63
+  m_Radius: 0.22
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.92, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &647381593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647381588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d759bc211f6cc45a8ec1dd65270466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 647381592}
+  animator: {fileID: 647381591}
+  speed: 3
+  velocityZ: 0
+  velocityX: 0
+  acceleration: 1
+  deceleration: 2
 --- !u!1001 &980010428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -774,14 +793,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
-  m_LocalRotation: {x: -0, y: 0.9994628, z: -0, w: 0.032773722}
-  m_LocalPosition: {x: 1.63, y: 11.26, z: 8.28}
+  m_LocalRotation: {x: -0, y: -0.07309673, z: -0, w: -0.9973249}
+  m_LocalPosition: {x: 5.87, y: 12.03, z: -4.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 176.244, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 368.384, z: 0}
 --- !u!114 &1823688468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,7 +1068,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d0be22c191130654284d7b1eed025597,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.60144
+      value: 9.62
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0be22c191130654284d7b1eed025597,
         type: 3}
