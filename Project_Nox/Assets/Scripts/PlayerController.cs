@@ -65,9 +65,9 @@ public class PlayerController : MonoBehaviour
         }
         
         // decrease velocityz backward
-        if (!forwardPressed && velocityZ < 0.0f)
+        if (!backPressed && velocityZ < 0.0f)
         {
-            velocityZ -= Time.deltaTime * deceleration;
+            velocityZ += Time.deltaTime * deceleration;
         }
 
         //reset velocityZ
