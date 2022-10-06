@@ -14,11 +14,11 @@ public class MainMenu : MonoBehaviour
     }
 
     public void PlayGame()
-    { SceneManager.LoadScene("Instructions"); }
+    { SceneManager.LoadScene("MainScene"); }
     public void Next()
     { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
     public void Settings()
-    { SceneManager.LoadScene("SettingsMenu"); }
+    { SceneManager.LoadScene("SettingMenu"); }
     public void Back()
     { SceneManager.LoadScene("MainMenu"); }
     public void Play()

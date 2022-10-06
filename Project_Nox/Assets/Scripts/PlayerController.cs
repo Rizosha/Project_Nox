@@ -156,11 +156,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             runPressed = true;
+            //animator.SetBool("isRunning",true);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             runPressed = false;
+            //animator.SetBool("isRunning",false);
         }
         
         
