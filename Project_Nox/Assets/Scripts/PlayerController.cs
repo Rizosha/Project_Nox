@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerController : MonoBehaviour
 {
@@ -54,8 +56,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-      
-       NewMovement();
+        NewMovement();
        
     }
 
@@ -150,26 +151,30 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * Time.deltaTime);
-
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
             runPressed = true;
-            //animator.SetBool("isRunning",true);
+            animator.SetBool("isRunning",true);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             runPressed = false;
-            //animator.SetBool("isRunning",false);
+            animator.SetBool("isRunning",false);
         }
-        
-        
+
         animator.SetFloat("VelocityZ", velocityZ);
         animator.SetFloat("VelocityX", velocityX);
-        
-      
+    }
+
+    void Attack()
+    {
+        /*if (Input.GetButton(MouseButton.LeftMouse))
+        {
+            
+        }*/
     }
 }
 
