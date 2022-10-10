@@ -55,9 +55,9 @@ public class PlayerController : MonoBehaviour
     }
     
     void Update()
-    {
+    { 
         NewMovement();
-       
+        Attack();
     }
 
     void OldMovement()
@@ -142,7 +142,8 @@ public class PlayerController : MonoBehaviour
         //float currentMaxVelocity = runPressed ? maxRunVelocity : maxWalkVelocity;
         
         
-         //create a target angle that moves the player in the direction of the camera given the input from the character controller
+        //create a target angle that moves the player in the direction of the camera given the input from the character
+        //controller
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -171,10 +172,20 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
-        /*if (Input.GetButton(MouseButton.LeftMouse))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            
-        }*/
+            animator.SetBool("Attacking", true);
+            StartCoroutine("AttackingFalse");
+        }
+    }
+
+   
+    
+    private IEnumerator AttackingFalse() 
+    {
+        yield return new WaitForSeconds(0.5f);
+       animator.SetBool("Attacking", false);
+        yield return null;
     }
 }
 
